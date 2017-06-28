@@ -43,3 +43,6 @@ c:\users\aredeker\documents\visual studio 2015\Projects\CodingChallenge_2\Coding
 c:\users\aredeker\documents\visual studio 2015\Projects\CodingChallenge_2\CodingChallenge_2\obj\Debug\CodingChallenge_2_MarkupCompile.lref
 c:\users\aredeker\documents\visual studio 2015\Projects\CodingChallenge_2\CodingChallenge_2\obj\Debug\GeneratedInternalTypeHelper.g.cs
 c:\users\aredeker\documents\visual studio 2015\Projects\CodingChallenge_2\CodingChallenge_2\obj\Debug\CodingChallenge_2.exe.licenses
+C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DocReader\CodingChallenge_2\CodingChallenge_2\bin\Debug\CodingChallenge_2.exe.config
+C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DocReader\CodingChallenge_2\CodingChallenge_2\obj\Debug\CodingChallenge_2.exe
+C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DocReader\CodingChallenge_2\CodingChallenge_2\obj\Debug\CodingChallenge_2.pdb
