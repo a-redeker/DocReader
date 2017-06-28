@@ -1,0 +1,16 @@
+This section contains documentation for DevExpress Reporting, which provides the capability to create reports and reporting applications targeted at the WinForms, ASP.NET and WPF platforms.
+
+Get Started with DevExpress Reporting
+Create the first report using online tutorials, videos and product documentation.
+
+Online Demos
+View and download all available demos related to DevExpress Reporting.
+
+DevExpress Reporting (YouTube)
+Browse the DevExpress Reporting playlist to see the available tutorial videos.
+
+Getting Started
+
+Finishing up
+
+Austin Redeker

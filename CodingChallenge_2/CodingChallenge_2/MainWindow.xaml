@@ -1,0 +1,53 @@
+﻿<dxr:DXRibbonWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:local="clr-namespace:CodingChallenge_2" xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" x:Class="CodingChallenge_2.MainWindow"
+        Title="MainWindow" Height="450" Width="725" DataContext="{dxmvvm:ViewModelSource Type={x:Type local:MainWindowViewModel}}"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="579*"/>
+            <ColumnDefinition Width="137*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <dxr:RibbonControl Grid.Row="0" RibbonStyle="Office2010" Grid.ColumnSpan="3" Margin="10,0,-10,0">
+            <dxr:RibbonDefaultPageCategory>
+                <dxr:RibbonPage Caption="Home">
+                    <dxr:RibbonPageGroup Caption="File">
+                        <dxb:BarButtonItem x:Name="NewItem" Content="Open" Glyph="{dx:DXImage Image=Open_32x32.png}" LargeGlyph="{dx:DXImage Image=Open_32x32.png}" Command="{Binding NewButtonPressCommand}"/>
+                        <dxb:BarItemSeparator/>
+                        <dxb:BarButtonItem x:Name="Save" Content="Save" LargeGlyph="{dx:DXImage Image=Save_32x32.png}" Glyph="{dx:DXImage Image=Save_16x16.png}" Command="{Binding SaveFileCommand}"/>
+                        <dxb:BarItemSeparator/>
+                        <dxb:BarEditItem x:Name="TextField" EditWidth="100" EditValue="{Binding textField, UpdateSourceTrigger=PropertyChanged}">
+                            <dxb:BarEditItem.EditSettings>
+                                <dxe:TextEditSettings />
+                            </dxb:BarEditItem.EditSettings>
+                        </dxb:BarEditItem>
+                        <dxb:BarButtonItem x:Name="Search" Content="Search" Glyph="{dx:DXImage Image=Reference_16x16.png}" Command="{Binding SearchButtonPressCommand}" />
+                        <dxb:BarItemSeparator/>
+                        <dxb:BarStaticItem ItemMinWidth="200" Content="{Binding matches}"/>
+                        <dxb:BarStaticItem ItemMinWidth="200" Content="{Binding totalWordsFound}"/>
+                        <dxb:BarStaticItem ItemMinWidth="200" Content="{Binding percWordsFound}"/>
+                    </dxr:RibbonPageGroup>
+                </dxr:RibbonPage>
+            </dxr:RibbonDefaultPageCategory>
+        </dxr:RibbonControl>
+        <dxe:TextEdit Name="TextEdit" Margin="10,10,9,10" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" Text="{Binding text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <dxr:RibbonStatusBarControl Grid.Row="2" Grid.ColumnSpan="3">
+            <dxr:RibbonStatusBarControl.RightItems>
+                <dxb:BarButtonItem x:Name="PrintItem" Content="Print" Glyph="{dx:DXImage Image=Print_16x16.png}"/>
+            </dxr:RibbonStatusBarControl.RightItems>
+        </dxr:RibbonStatusBarControl>
+
+    </Grid>
+</dxr:DXRibbonWindow>
